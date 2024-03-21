@@ -117,8 +117,6 @@
         "locating-persons-by-name-find": "Locating persons by name : find",
         "deleting-a-person-delete": "Deleting a person : delete",
         "clearing-all-entries-clear": "Clearing all entries : clear",
-        "adding-interest-tag-interest": "Adding interest tag : interest",
-        "locating-persons-by-interest-findinterest": "Locating persons by interest : findInterest",
         "adding-persons-to-schedule-addsched": "Adding persons to schedule : addSched",
         "exiting-the-program-exit": "Exiting the program : exit",
         "saving-the-data": "Saving the data",
