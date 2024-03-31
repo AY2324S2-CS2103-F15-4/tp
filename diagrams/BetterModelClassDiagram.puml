@@ -14,7 +14,7 @@ Tag <|-- Interest
 UniquePersonList -right-> Person
 
 Person -up-> "*" Tag
-Tag -> "*" Interest
+Tag #--> Interest
 
 Person *--> Name
 Person *--> Phone
