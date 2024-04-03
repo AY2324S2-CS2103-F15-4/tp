@@ -221,7 +221,6 @@ public class MainWindow extends UiPart<Stage> {
                         //populatedPerson.forEach(person -> System.out.print(person.getName()));
                         updateTableView(populatedPerson);
                         populatePersonNameComboBox();
-                        personListPanel.refresh();
                     }
                 }
             }
