@@ -92,7 +92,7 @@
                 </VBox>
               </HBox>
               <VBox styleClass="background" VBox.vgrow="ALWAYS">
-                <ScrollPane fx:id="ScrollSchedule" fitToHeight="true" fitToWidth="true">
+                <ScrollPane fx:id="ScrollSchedule" fitToHeight="true">
                   <StackPane fx:id="schedulePanelPlaceholder" VBox.vgrow="ALWAYS"/>
                 </ScrollPane>
               </VBox>
