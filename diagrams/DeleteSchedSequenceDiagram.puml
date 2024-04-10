@@ -1,0 +1,70 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":DeleteSchedCommandParser" as DeleteSchedCommandParser LOGIC_COLOR
+participant "d:DeleteSchedCommand" as DeleteSchedCommand LOGIC_COLOR
+participant "r:CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant "m:Model" as Model MODEL_COLOR
+end box
+
+[-> LogicManager : execute("deleteSched 1 schedule/1")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("deleteSched 1 schedule/1")
+activate AddressBookParser
+
+create DeleteSchedCommandParser
+AddressBookParser -> DeleteSchedCommandParser
+activate DeleteSchedCommandParser
+
+DeleteSchedCommandParser --> AddressBookParser
+deactivate DeleteSchedCommandParser
+
+AddressBookParser -> DeleteSchedCommandParser : parse("1 schedule/1")
+activate DeleteSchedCommandParser
+
+create DeleteSchedCommand
+DeleteSchedCommandParser -> DeleteSchedCommand
+activate DeleteSchedCommand
+
+DeleteSchedCommand --> DeleteSchedCommandParser :
+deactivate DeleteSchedCommand
+
+DeleteSchedCommandParser --> AddressBookParser : d
+deactivate DeleteSchedCommandParser
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+DeleteSchedCommandParser -[hidden]-> AddressBookParser
+destroy DeleteSchedCommandParser
+
+AddressBookParser --> LogicManager : d
+deactivate AddressBookParser
+
+LogicManager -> DeleteSchedCommand : execute(m)
+activate DeleteSchedCommand
+
+DeleteSchedCommand -> Model : addSchedule(args)
+activate Model
+
+Model --> DeleteSchedCommand
+deactivate Model
+
+create CommandResult
+DeleteSchedCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> DeleteSchedCommand
+deactivate CommandResult
+
+DeleteSchedCommand --> LogicManager : r
+deactivate DeleteSchedCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml
