@@ -1,0 +1,20 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+'https://plantuml.com/activity-diagram-beta
+
+start
+:User uses editSched command;
+if () then ([schedule details valid])
+    :Look through user(s)'
+    schedule in Storage;
+    :edit selected schedule in user(s)' schedule list;
+    if () then ([schedule name already exists])
+         :Throw error message;
+else ([else])
+endif
+endif
+stop
+
+@enduml

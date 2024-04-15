@@ -1,0 +1,20 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+'https://plantuml.com/activity-diagram-beta
+
+start
+:User uses deleteSched command;
+if () then ([person and schedule index valid])
+    :Look at user's
+    schedule in Storage;
+    :delete selected Schedule in user's schedule list;
+    if () then ([schedule exists])
+         :Delete Schedule;
+else ([else])
+endif
+endif
+stop
+
+@enduml
