@@ -14,6 +14,7 @@ Class ResultDisplay
 Class PersonListPanel
 Class PersonCard
 Class StatusBarFooter
+Class WeeklyScheduleView
 Class CommandBox
 }
 
