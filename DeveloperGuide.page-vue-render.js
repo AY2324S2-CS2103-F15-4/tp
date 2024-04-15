@@ -380,6 +380,6 @@ with(this){return _c('h2',{attrs:{"id":"appendix-planned-enhancments"}},[_c('str
 with(this){return _c('ol',[_c('li',[_v("Adding the color to the schedule display corresponding to the tag Person")]),_v(" "),_c('li',[_v("Have a command to view a certain date, and show the schedule for that week/date")]),_v(" "),_c('li',[_v("Add command to view schedules instead of drop-down box")]),_v(" "),_c('li',[_v("Enhance find command to allow for specific category finding (e.g. find [name/] [email/])")]),_v(" "),_c('li',[_v("Split group schedules cell display in the event that multiple schedules' timings coincide")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Mon, 15 Apr 2024, 15:32:03 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.4.0")]),_v(", generated on Mon, 15 Apr 2024, 15:45:49 GMT+8]")])])])}
 }];
   
