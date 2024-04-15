@@ -67,6 +67,8 @@
         "launch-and-shutdown": "Launch and shutdown",
         "deleting-a-person": "Deleting a person",
         "adding-a-schedule": "Adding a schedule",
+        "editing-a-schedule": "Editing a schedule",
+        "deleting-a-schedule": "Deleting a schedule",
         "saving-data": "Saving data",
         "appendix-planned-enhancments": "Appendix: Planned Enhancments"
       },
